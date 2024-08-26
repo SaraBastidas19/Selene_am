@@ -36,7 +36,14 @@ body {
 .menu-icon {
     font-size: 1.5em;
     cursor: pointer;
-    margin-right: auto;
+}
+
+/* Icono de usuario */
+.user-icon {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px;
+    cursor: pointer;
+    filter: invert(1); /* Asegura que el icono sea blanco */
 }
 
 /* Margen estático para la barra superior */
