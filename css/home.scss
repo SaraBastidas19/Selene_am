@@ -7,7 +7,7 @@
 
 /* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
+   
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,7 +15,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5271FE; /* Cambia el color de fondo */
+    color: #ffffff; /* Cambia el color del texto */
 }
 
 /* Barra de navegación */
@@ -25,7 +27,7 @@ body {
     left: 0;
     width: 100%;
     padding: 15px;
-    background-color: #333;
+    background-color: #C7A5FF;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -33,7 +35,12 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
-
+.logocolor {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+   
+}
 .brand-title {
     font-size: 1.5em;
     font-weight: bold;
@@ -68,12 +75,12 @@ p {
     padding: 10px 20px;
     font-size: 1.2em;
     color: white;
-    background-color: #007BFF;
+    background-color: #C7A5FF;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .enter-btn:hover {
-    background-color: #0056b3;
+    background-color:#C7A5FF;
 }

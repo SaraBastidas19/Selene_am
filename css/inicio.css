@@ -1,110 +1,84 @@
-/* Estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+@charset "UTF-8";
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #5271FE; /* Cambia el color de fondo */
+  color: #ffffff; /* Cambia el color del texto */
 }
 
-/* Barra de navegación */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  background-color: #B088F9; /* Cambia el color del navbar */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Icono del menú */
 .menu-icon {
-    font-size: 1.5em;
-    cursor: pointer;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 
-/* Icono de usuario */
 .user-icon {
-    width: 30px; /* Ajusta el tamaño según sea necesario */
-    height: 30px;
-    cursor: pointer;
-    filter: invert(1); /* Asegura que el icono sea blanco */
+  width: 40px;
+  height: 40px;
+  color: white;
 }
 
-/* Margen estático para la barra superior */
-main {
-    text-align: center;
-    margin-top: 80px; /* Ajusta este valor para dejar espacio para futuros iconos */
-}
-
-/* Estilos específicos para la página de inicio */
-.home-content {
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-}
-
-.home-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.home-content p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #333;
-}
-
-/* Estilos del menú lateral */
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1000;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #C7A4FF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  background-color: #5271FE;
 }
 
 .closebtn {
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #5271FE;
 }
+
+.home-content {
+  text-align: center;
+  margin-top: 100px; /* Ajustar para que no quede debajo del navbar */
+  margin: 50px;
+}
+
+.logocolor {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1em;
+  color: #FFD700; /* Cambiar el color del texto del título */
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}/*# sourceMappingURL=inicio.css.map */
