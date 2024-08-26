@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Estilos globales */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -45,7 +44,6 @@ body {
   text-decoration: none;
   font-size: 1em;
   margin-left: auto;
-  margin-right: 0; /* Asegura que el botón esté completamente a la derecha */
 }
 
 /* Contenido principal */
@@ -54,18 +52,39 @@ main {
   margin-top: 100px; /* Desplaza el contenido para evitar que quede debajo de la barra */
 }
 
-h1 {
-  font-size: 2.5em;
+/* Estilos específicos para la página de Registro */
+.register-box {
+  border: 2px solid black;
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.register-box h1 {
   margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+.register-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
-/* Botón de entrar */
-.enter-btn {
+.register-box input::-moz-placeholder {
+  color: #888;
+}
+
+.register-box input::placeholder {
+  color: #888;
+}
+
+/* Botón de siguiente */
+.next-btn, .register-btn {
   padding: 10px 20px;
   font-size: 1.2em;
   color: white;
@@ -73,8 +92,22 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 }
 
-.enter-btn:hover {
+.next-btn:hover, .register-btn:hover {
   background-color: #0056b3;
-}/*# sourceMappingURL=home.css.map */
+}
+
+/* Enlace para iniciar sesión */
+.register-link {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=register.css.map */
