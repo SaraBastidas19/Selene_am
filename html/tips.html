@@ -10,16 +10,8 @@
 <body>
     <header>
         <div class="navbar">
-            <span class="menu-icon" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
-            <span class="brand-title">Selene</span>
+            <a href="/Selene_am/html/inicio.html" class="menu-icon">Inicio</a>
             <img src="/Selene_am/images/person.svg" alt="Usuario" class="user-icon" onclick="window.location.href='user.html'">
-        </div>
-        <div id="sidebar" class="sidebar">
-            <button class="closebtn" onclick="toggleSidebar()">&times;</button>
-            <a href="#">Inicio</a>
-            <a href="#">Perfil</a>
-            <a href="#">Configuración</a>
-            <a href="#">Ayuda</a>
         </div>
     </header>
 
@@ -53,21 +45,11 @@
 
     <footer>
         <div class="bottom-bar">
-            <span class="bottom-icon"><img src="/Selene_am/images/calendar-outline.svg" alt="Calendario" ></span>
-            <span class="bottom-icon"><img src="/Selene_am/images/heart-circle-outline.svg" alt="Usuario" onclick="window.location.href='/Selene_am/html/usuario.html'"></span>
-            <span class="bottom-icon"><img src="/Selene_am/images/book-outline.svg" alt="Configuración" onclick="window.location.href='/Selene_am/html/usuario.html'"></span>
+            <span class="bottom-icon"><img src="/Selene_am/images/calendar-outline.svg" alt="Calendario" onclick="window.location.href='/Selene_am/html/calendario.html'"></span>
+            <span class="bottom-icon"><img src="/Selene_am/images/heart-circle-outline.svg" alt="Usuario" ></span>
+            <span class="bottom-icon"><img src="/Selene_am/images/book-outline.svg" alt="Configuración" onclick="window.location.href='/Selene_am/html/mensajes.html'"></span>
         </div>
     </footer>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.width === '250px') {
-                sidebar.style.width = '0';
-            } else {
-                sidebar.style.width = '250px';
-            }
-        }
-    </script>
 </body>
 </html>
+
