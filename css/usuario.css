@@ -1,42 +1,42 @@
-/* Estilos globales */
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #FFFAF0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-}
-
-/* Barra de navegación */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background-color: #333;
-    color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background-color: #D9B8FF;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fija la barra superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .home-link {
+    font-size: 18px;
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
 }
 
-/* Contenido centrado */
+.home-link:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.home-link:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+}
+
 .user-content {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px; /* Añade margen superior para evitar superposición */
     padding: 20px;
 }
 
@@ -44,55 +44,56 @@ body {
     width: 100px;
     height: 100px;
     margin-bottom: 20px;
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.user-icon:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
 }
 
-/* Alineación de 'Perfil' */
+.user-icon:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+}
+
 .perfil-title {
-    font-size: 1.5em;
-    text-align: left;
-    margin-bottom: 10px;
-    width: 80%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Campos de usuario */
-.user-fields {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: #5A67D8;
     margin-bottom: 20px;
 }
 
-.user-fields input {
-    width: 80%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+.user-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 33.33%; /* Ocupa un tercio del ancho */
+    margin: 0 auto; /* Centra los campos */
 }
 
-/* Botón de salir */
-.logout-button {
-    width: 80%;
-    max-width: 400px;
+.user-fields input {
     padding: 10px;
-    background-color: #333;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.logout-button {
+    background-color: #FF6B6B;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.2s, transform 0.2s; /* Añade una transición suave */
 }
 
 .logout-button:hover {
-    background-color: #555;
+    background-color: #FF4C4C; /* Cambia el color de fondo al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.logout-button:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
