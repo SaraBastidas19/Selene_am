@@ -64,13 +64,10 @@ main {
   width: 300px;
   box-shadow: 0 4px 8px rgba(202, 17, 17, 0.1);
   border-radius: 10px;
+  background-color: #fff;
 }
 
-.login-box h1 {
-  margin-bottom: 20px;
-}
-
-.logo {
+.login-box img.logo {
   width: 200px;
   height: auto;
   margin-bottom: 20px;
@@ -133,4 +130,15 @@ main {
 
 .register-link:hover {
   text-decoration: underline;
-}/*# sourceMappingURL=login.css.map */
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .login-box {
+    width: 100%;
+    padding: 10px;
+  }
+}
