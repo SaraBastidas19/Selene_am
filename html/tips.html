@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips - Selene</title>
+    <link rel="stylesheet" href="/Selene_am/css/tips.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <span class="menu-icon" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
+            <span class="brand-title">Selene</span>
+            <img src="/Selene_am/images/person.svg" alt="Usuario" class="user-icon" onclick="window.location.href='user.html'">
+        </div>
+        <div id="sidebar" class="sidebar">
+            <button class="closebtn" onclick="toggleSidebar()">&times;</button>
+            <a href="#">Inicio</a>
+            <a href="#">Perfil</a>
+            <a href="#">Configuración</a>
+            <a href="#">Ayuda</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="tips-section">
+            <h2>Salud</h2>
+            <div class="tips-grid">
+                <!-- Coloca aquí los tips relacionados con la salud -->
+                <div class="tip-item">Tip 1</div>
+                <div class="tip-item">Tip 2</div>
+                <div class="tip-item">Tip 3</div>
+            </div>
+
+            <h2>Ciclo</h2>
+            <div class="tips-grid">
+                <!-- Coloca aquí los tips relacionados con el ciclo -->
+                <div class="tip-item">Tip 4</div>
+                <div class="tip-item">Tip 5</div>
+                <div class="tip-item">Tip 6</div>
+            </div>
+
+            <h2>General</h2>
+            <div class="tips-grid">
+                <!-- Coloca aquí los tips generales -->
+                <div class="tip-item">Tip 7</div>
+                <div class="tip-item">Tip 8</div>
+                <div class="tip-item">Tip 9</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="bottom-bar">
+            <span class="bottom-icon"><img src="/Selene_am/images/calendar-outline.svg" alt="Calendario" ></span>
+            <span class="bottom-icon"><img src="/Selene_am/images/heart-circle-outline.svg" alt="Usuario" onclick="window.location.href='/Selene_am/html/usuario.html'"></span>
+            <span class="bottom-icon"><img src="/Selene_am/images/book-outline.svg" alt="Configuración" onclick="window.location.href='/Selene_am/html/usuario.html'"></span>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+            } else {
+                sidebar.style.width = '250px';
+            }
+        }
+    </script>
+</body>
+</html>
