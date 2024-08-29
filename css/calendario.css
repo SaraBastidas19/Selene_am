@@ -14,48 +14,15 @@ body {
     padding: 10px;
 }
 
-.menu-icon img, .user-icon {
+.menu-icon {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.user-icon {
     width: 24px;
     cursor: pointer;
-}
-
-.brand-title {
-    font-size: 1.5em;
-}
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #6a1b9a;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    background-color: #f48fb1;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    color: #fff;
 }
 
 .calendar-container {
