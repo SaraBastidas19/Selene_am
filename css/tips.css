@@ -1,32 +1,42 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FFFAF0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6a1b9a;
-    color: #fff;
+    background-color: #D9B8FF;
     padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fija la barra superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .menu-icon {
-    font-size: 1.5em;
-    color: #fff;
+    font-size: 18px;
+    color: white;
     text-decoration: none;
 }
 
 .user-icon {
     width: 24px;
-    cursor: pointer;
+    height: 24px;
+    margin-right: 10px; /* Añade margen a la derecha */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
 }
 
 .tips-section {
-    padding: 20px;
+    padding: 80px 20px 20px 20px; /* Añade margen superior para evitar superposición */
+    color: #333;
+    font-size: 14px;
+    text-align: center;
 }
 
 .tips-grid {
@@ -36,26 +46,37 @@ body {
 }
 
 .tip-item {
-    background-color: #fff;
-    border: 1px solid #e1bee7;
-    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
     padding: 10px;
     flex: 1 1 calc(33.333% - 20px);
     box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .bottom-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #6a1b9a;
     padding: 10px 0;
+    background-color: #D9B8FF;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
-.bottom-icon img {
+.bottom-icon {
     width: 24px;
-    cursor: pointer;
+    height: 24px;
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
+}
+
+.bottom-icon:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.bottom-icon:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }

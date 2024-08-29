@@ -1,56 +1,77 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FFFAF0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6a1b9a;
-    color: #fff;
+    background-color: #D9B8FF;
     padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fija la barra superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .menu-icon {
-    font-size: 1.5em;
-    color: #fff;
+    font-size: 18px;
+    color: white;
     text-decoration: none;
 }
 
 .user-icon {
     width: 24px;
-    cursor: pointer;
+    height: 24px;
+    margin-right: 10px; /* Añade margen a la derecha */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
+}
+
+.user-icon:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.user-icon:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
 
 .calendar-container {
     width: 90%;
     max-width: 400px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 80px auto 20px auto; /* Añade margen superior para evitar superposición */
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .calendar-container h2 {
-    background-color: #6a1b9a;
-    color: #fff;
+    background-color: #D9B8FF;
+    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     margin: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .calendar {
     padding: 10px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
 }
 
 .calendar-weekdays {
     display: flex;
     justify-content: space-between;
-    background-color: #e1bee7;
+    background-color: #E0E0E0;
     padding: 5px 0;
 }
 
@@ -58,7 +79,7 @@ body {
     width: 14.28%;
     text-align: center;
     font-weight: bold;
-    color: #6a1b9a;
+    color: #5A67D8;
 }
 
 .calendar-days {
@@ -72,7 +93,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #e1bee7;
+    border: 1px solid #E0E0E0;
     box-sizing: border-box;
     position: relative;
 }
@@ -82,12 +103,12 @@ body {
     top: 5px;
     right: 5px;
     font-size: 0.8em;
-    color: #6a1b9a;
+    color: #5A67D8;
 }
 
-.calendar-days .period-day {
-    background-color: #f48fb1;
-    color: #fff;
+.calendar-days .period-day, .calendar-days .next-period-day {
+    background-color: #D9B8FF;
+    color: white;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -97,46 +118,36 @@ body {
     position: relative;
 }
 
-.calendar-days .period-day span {
+.calendar-days .period-day span, .calendar-days .next-period-day span {
     position: absolute;
     top: 5px;
     right: 5px;
     font-size: 0.8em;
-    color: #fff;
-}
-
-.calendar-days .next-period-day {
-    background-color: #ffcc80;
-    color: #fff;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.calendar-days .next-period-day span {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 0.8em;
-    color: #fff;
+    color: white;
 }
 
 .bottom-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #6a1b9a;
     padding: 10px 0;
+    background-color: #D9B8FF;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
-.bottom-icon img {
+.bottom-icon {
     width: 24px;
-    cursor: pointer;
+    height: 24px;
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
+}
+
+.bottom-icon:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.bottom-icon:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
