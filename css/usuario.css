@@ -36,18 +36,21 @@ body {
 
 .user-content {
     text-align: center;
-    margin-top: 80px; /* Añade margen superior para evitar superposición */
+    margin-top: 150px; /* Añade margen superior para mover todo el contenedor hacia abajo */
     padding: 20px;
+    width: 33.33%; /* Ocupa un tercio del ancho */
+    margin: 0 auto; /* Centra el contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
 }
 
 .user-icon {
     width: 100px;
     height: 100px;
     margin-bottom: 20px;
-    cursor: pointer; /* Cambia el cursor a pointer */
-    transition: transform 0.2s; /* Añade una transición suave */
+    margin-top: 100px; /* Aumenta este valor para bajar más el ícono */
+    cursor: pointer; 
+    transition: transform 0.2s; 
 }
-
 .user-icon:hover {
     transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
 }
@@ -66,8 +69,8 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-    width: 33.33%; /* Ocupa un tercio del ancho */
-    margin: 0 auto; /* Centra los campos */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
 }
 
 .user-fields input {
@@ -78,15 +81,22 @@ body {
     font-size: 14px;
 }
 
+.user-fields input[type="password"] {
+    margin-bottom: 20px; /* Añade margen inferior para evitar superposición */
+}
+
 .logout-button {
     background-color: #FF6B6B;
     color: white;
     border: none;
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 14px;
     cursor: pointer; /* Cambia el cursor a pointer */
     transition: background-color 0.2s, transform 0.2s; /* Añade una transición suave */
+    width: 100%; /* Asegura que el botón ocupe el mismo ancho que las celdas de texto */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    margin: 20px auto 0; /* Añade margen superior para mover el botón hacia abajo */
 }
 
 .logout-button:hover {
@@ -97,3 +107,22 @@ body {
 .logout-button:active {
     transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .user-content {
+        width: 50%; /* Ocupa la mitad del ancho en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .user-content {
+        width: 80%; /* Ocupa el 80% del ancho en pantallas pequeñas */
+    }
+
+    .logout-button {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+        padding: 15px; /* Aumenta el padding para mejor usabilidad */
+    }
+}
+
