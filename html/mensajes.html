@@ -20,18 +20,8 @@
 
     <main>
         <h2 class="main-title">MENSAJES</h2>
-        <div class="message-card">
-            <div class="message-header">Inicio</div>
-            <div class="message-body">Recuerda prepararte para la llegada de tu ciclo</div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">Inicio</div>
-            <div class="message-body">Recuerda prepararte para la llegada de tu ciclo</div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">Inicio</div>
-            <div class="message-body">Recuerda prepararte para la llegada de tu ciclo</div>
-        </div>
+        <button id="clear-messages-button">Borrar Todo</button>
+        <div id="messages-container"></div>
     </main>
 
     <footer>
@@ -44,6 +34,29 @@
                 onclick="window.location.href='/Selene_am/html/mensajes.html'">
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messagesContainer = document.getElementById('messages-container');
+            const clearMessagesButton = document.getElementById('clear-messages-button');
+            const messages = JSON.parse(localStorage.getItem('messages')) || [];
+
+            messages.forEach(message => {
+                const messageCard = document.createElement('div');
+                messageCard.classList.add('message-card');
+                messageCard.innerHTML = `
+                    <div class="message-header">Notificación</div>
+                    <div class="message-body">${message.text}</div>
+                `;
+                messagesContainer.appendChild(messageCard);
+            });
+
+            clearMessagesButton.addEventListener('click', function() {
+                localStorage.removeItem('messages');
+                messagesContainer.innerHTML = '';
+            });
+        });
+    </script>
 </body>
 
 </html>
