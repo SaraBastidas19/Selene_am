@@ -1,0 +1,133 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FFF1D4;
+}
+.logocolor {
+    width: 30px;
+    height: auto;
+    margin-bottom: 5px;
+   
+}
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #C7A4FF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(215, 1, 1, 0.1);
+    z-index: 1000;
+}
+
+.brand-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.login-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: auto;
+}
+
+/* Contenido principal */
+main {
+    text-align: center;
+    margin-top: 100px; /* Desplaza el contenido para evitar que quede debajo de la barra */
+}
+
+/* Estilos específicos para la página de Login */
+.login-box {
+   
+    padding: 30px;
+    width: 300px;
+   
+    box-shadow: 0 4px 8px rgba(202, 17, 17, 0.1);
+    border-radius: 10px;
+}
+
+.login-box h1 {
+    margin-bottom: 20px;
+}
+.logo{
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+   
+}
+
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #C7A5FF;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.login-box input::placeholder {
+    color: #C7A4FF;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Botón de entrar */
+.enter-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #FF5B5B;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.enter-btn:hover {
+    background-color: #5271FE;
+}
+
+/* Enlace para registrarse */
+.register-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #5271FE;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Selene</title>
+    <link rel="stylesheet" href="/Selene_am/css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <span class="menu-icon" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
+            <span class="brand-title">Selene</span>
+            <a href="/Selene_am/html/usuario.html"><img src="/Selene_am/images/person.svg" alt="Usuario" class="user-icon"></a>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <button class="closebtn" onclick="toggleSidebar()">&times;</button>
+            <a href="/Selene_am/html/calendario.html">Calendario</a>
+            <a href="/Selene_am/html/tips.html">Tips</a>
+            <a href="/Selene_am/html/mensajes.html">Mensajes</a>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="home-content">
+            <h1>Selene</h1>
+            <p>
+                ¡Hola y bienvenida a SELENE!<br>
+                Nos alegra tenerte aquí. Nuestra aplicación está diseñada para ser tu aliada en cada etapa de tu ciclo menstrual, ofreciendo información, seguimiento y una comunidad de apoyo. ¡Comienza a explorar y descubre todo lo que tenemos para ti!
+            </p>
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+            } else {
+                sidebar.style.width = '250px';
+            }
+        }
+    </script>
+</body>
+</html>

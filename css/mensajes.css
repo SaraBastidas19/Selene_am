@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAF0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9B8FF;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fija la barra superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+}
+
+.menu-icon {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.user-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Añade margen a la derecha */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
+}
+
+
+.user-icon:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.user-icon:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+}
+
+.main-title {
+    text-align: center;
+    color: #5A67D8;
+    margin: 80px 0 20px 0; /* Añade margen superior para evitar superposición */
+}
+
+.message-card {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    margin: 10px 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-header {
+    background-color: #D9B8FF;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.message-body {
+    color: #333;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #D9B8FF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: transform 0.2s; /* Añade una transición suave */
+}
+
+.bottom-icon:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.bottom-icon:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+}
+#clear-messages-button {
+    background-color: #ff4d4d; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin: 10px auto; /* Margen superior e inferior, centrado horizontalmente */
+    display: block; /* Convertir en bloque para centrar */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+#clear-messages-button:hover {
+    background-color: #ff1a1a; /* Color de fondo al pasar el cursor */
+}
+

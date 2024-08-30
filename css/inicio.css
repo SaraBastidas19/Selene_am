@@ -1,0 +1,84 @@
+@charset "UTF-8";
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #5271FE; /* Cambia el color de fondo */
+  color: #ffffff; /* Cambia el color del texto */
+}
+
+.navbar {
+  background-color: #B088F9; /* Cambia el color del navbar */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #C7A4FF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #5271FE;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #5271FE;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 100px; /* Ajustar para que no quede debajo del navbar */
+  margin: 50px;
+}
+
+.logocolor {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1em;
+  color: #FFD700; /* Cambiar el color del texto del título */
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}/*# sourceMappingURL=inicio.css.map */

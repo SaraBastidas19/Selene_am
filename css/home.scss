@@ -1,0 +1,86 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+   
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5271FE; /* Cambia el color de fondo */
+    color: #ffffff; /* Cambia el color del texto */
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #C7A5FF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.logocolor {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+   
+}
+.brand-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.login-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: 0; /* Asegura que el botón esté completamente a la derecha */
+}
+
+/* Contenido principal */
+main {
+    text-align: center;
+    margin-top: 100px; /* Desplaza el contenido para evitar que quede debajo de la barra */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botón de entrar */
+.enter-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #C7A5FF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.enter-btn:hover {
+    background-color:#C7A5FF;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario - Selene</title>
+    <link rel="stylesheet" href="/Selene_am/css/usuario.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="inicio.html" class="home-link">Inicio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="user-content">
+            <img src="/Selene_am/images/person.svg" alt="Usuario" class="user-icon">
+            <h2 id="userNameHeader">User</h2>
+            <h3 class="perfil-title">Perfil</h3>
+            <div class="user-fields">
+                <button id="seguirCicloButton" class="action-button" onclick="window.location.href='calendario.html'">Seguir mi ciclo</button>
+
+                <!-- Aquí se mostrarán el nombre de usuario y el año de nacimiento -->
+                <p id="displayUsername" class="user-info">Nombre de Usuario: Cargando...</p>
+                <p id="displayBirthYear" class="user-info">Fecha de Nacimiento: Cargando...</p>
+                <button id="cambiarContraseñaButton" class="action-button" onclick="window.location.href='recuperar_contraseña.html'">Cambiar contraseña</button>
+            </div>
+            <button class="logout-button" onclick="window.location.href='home.html'">Salir</button>
+        </div>
+    </main>
+
+    <script src="/Selene_am/js/usuario.js"></script>
+</body>
+</html>
