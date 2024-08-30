@@ -1,161 +1,162 @@
+@charset "UTF-8";
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFFAF0;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFAF0;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #D9B8FF;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fija la barra superior */
-    top: 0; /* Posición en la parte superior */
-    width: 100%; /* Ancho completo */
-    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D9B8FF;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fija la barra superior */
+  top: 0; /* Posición en la parte superior */
+  width: 100%; /* Ancho completo */
+  z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .menu-icon {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 
 .user-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px; /* Añade margen a la derecha */
-    cursor: pointer; /* Cambia el cursor a pointer */
-    transition: transform 0.2s; /* Añade una transición suave */
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* Añade margen a la derecha */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  transition: transform 0.2s; /* Añade una transición suave */
 }
 
 .user-icon:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
 }
 
 .user-icon:active {
-    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+  transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
 
 .calendar-container {
-    width: 90%;
-    max-width: 400px;
-    margin: 80px auto 20px auto; /* Añade margen superior para evitar superposición */
-    background-color: white;
-    border: 1px solid #E0E0E0;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  width: 90%;
+  max-width: 400px;
+  margin: 80px auto 20px auto; /* Añade margen superior para evitar superposición */
+  background-color: white;
+  border: 1px solid #E0E0E0;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .calendar-container h2 {
-    background-color: #D9B8FF;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  background-color: #D9B8FF;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .calendar {
-    padding: 10px;
-    color: #333;
-    font-size: 14px;
-    text-align: center;
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
 }
 
 .calendar-weekdays {
-    display: flex;
-    justify-content: space-between;
-    background-color: #E0E0E0;
-    padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E0E0E0;
+  padding: 5px 0;
 }
 
 .calendar-weekdays div {
-    width: 14.28%;
-    text-align: center;
-    font-weight: bold;
-    color: #5A67D8;
+  width: 14.28%;
+  text-align: center;
+  font-weight: bold;
+  color: #5A67D8;
 }
 
 .calendar-days {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .calendar-days div {
-    width: 14.28%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #E0E0E0;
-    box-sizing: border-box;
-    position: relative;
+  width: 14.28%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .calendar-days div span {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 0.8em;
-    color: #5A67D8;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 0.8em;
+  color: #5A67D8;
 }
 
 .calendar-days .period-day, .calendar-days .next-period-day {
-    background-color: #D9B8FF;
-    color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background-color: #D9B8FF;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .calendar-days .period-day span, .calendar-days .next-period-day span {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 0.8em;
-    color: white;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 0.8em;
+  color: white;
 }
 
 .bottom-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    background-color: #D9B8FF;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #D9B8FF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .bottom-icon {
-    width: 24px;
-    height: 24px;
-    cursor: pointer; /* Cambia el cursor a pointer */
-    transition: transform 0.2s; /* Añade una transición suave */
+  width: 24px;
+  height: 24px;
+  cursor: pointer; /* Cambia el cursor a pointer */
+  transition: transform 0.2s; /* Añade una transición suave */
 }
 
 .bottom-icon:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
 }
 
 .bottom-icon:active {
-    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+  transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
 
 .next-cycle-day {
-    background-color: pink; /* Color rosa para los días del próximo ciclo */
+  background-color: pink; /* Color rosa para los días del próximo ciclo */
 }
 
 .ovulation-day {
-    background-color: lightblue; /* Color azul para los días de ovulación */
-}
+  background-color: lightblue; /* Color azul para los días de ovulación */
+}/*# sourceMappingURL=calendario.css.map */

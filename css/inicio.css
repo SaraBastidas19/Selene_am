@@ -67,15 +67,15 @@ body {
   margin: 50px;
 }
 
-.logocolor {
-  width: 200px;
+.logo {
+  width: 150px;
   height: auto;
   margin-bottom: 20px;
 }
 
 h1 {
   font-size: 1em;
-  color: #FFD700; /* Cambiar el color del texto del título */
+  color: #ffffff; /* Cambiar el color del texto del título */
 }
 
 p {

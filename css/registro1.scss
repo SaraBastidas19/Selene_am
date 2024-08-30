@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Estilos globales */
 * {
   margin: 0;
@@ -55,78 +56,74 @@ body {
 
 /* Estilos específicos para la página de Registro 1 */
 .register-box {
-  padding: 30px;
-  width: 300%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
+    padding: 30px;
+    width: 300%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
 }
-
 .logo {
   width: 150px;
   height: auto;
   margin-bottom: 20px;
+ 
 }
-
 .register-box h1 {
-  color: #5271FE; /* Color del texto morado */
-  margin-bottom: 20px;
+    color:#5271FE; /* Color del texto morado */
+    margin-bottom: 20px;
 }
 
-.register-box input[type=text],
-.register-box input[type=password] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #C7A4FF;
-  border-radius: 20px;
-  font-size: 1em;
-}
-
-.register-box input::-moz-placeholder {
-  color: #C7A4FF;
+.register-box input[type="text"],
+.register-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid  #C7A4FF;
+    border-radius: 20px;
+    font-size: 1em;
 }
 
 .register-box input::placeholder {
-  color: #C7A4FF;
+    color:#C7A4FF
 }
 
 /* Botón de registrarse */
 .enter-btn {
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: white;
-  background-color: #FF5B5B;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #FF5B5B;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .enter-btn:hover {
-  background-color: #FF5B5B;
+    background-color: #FF5B5B;
 }
 
 /* Enlace para iniciar sesión */
 .register-link {
-  display: block;
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #007BFF;
-  text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color:#007BFF;
+    text-decoration: none;
 }
 
 .register-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-  }
-  .register-box {
-    width: 100%;
-    padding: 20px;
-  }
-}/*# sourceMappingURL=registro1.css.map */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .register-box {
+        width: 100%;
+        padding: 20px;
+    }
+}

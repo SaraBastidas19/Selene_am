@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -66,13 +66,22 @@ main {
   border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .login-box h1 {
   margin-bottom: 20px;
 }
 
 .logo {
   width: 200px;
+=======
+.logo {
+  width: 150px;
+>>>>>>> d000829ee2228f42eca30bdb7eb1e180f058310e
   height: auto;
+  margin-bottom: 20px;
+}
+
+.login-box h1 {
   margin-bottom: 20px;
 }
 

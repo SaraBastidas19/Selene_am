@@ -1,145 +1,149 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFFAF0;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFAF0;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #D9B8FF;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D9B8FF;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .home-link {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.2s;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .home-link:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .home-link:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .user-content {
-    text-align: center;
-    margin-top: 150px;
-    padding: 20px;
-    width: 33.33%;
-    margin: 0 auto;
-    box-sizing: border-box;
+  text-align: center;
+  margin-top: 150px;
+  padding: 20px;
+  width: 33.33%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .user-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-    transition: transform 0.2s;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .user-icon:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .user-icon:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .perfil-title {
-    color: #5A67D8;
-    margin-bottom: 20px;
+  color: #5A67D8;
+  margin-bottom: 20px;
 }
 
 .user-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .user-info {
-    padding: 10px;
-    border: 1px solid #D9B8FF;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    background-color: white;
-    color: #5A67D8;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #D9B8FF;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  background-color: white;
+  color: #5A67D8;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .action-button {
-    background-color: #D9B8FF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
+  background-color: #C7A5FF;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px auto 0;
 }
 
 .action-button:hover {
-    background-color: #B08ED9;
-    transform: scale(1.1);
+  background-color: #B08ED9;
+  transform: scale(1.1);
 }
 
 .action-button:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .logout-button {
-    background-color: #FF6B6B;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 20px auto 0;
+  background-color: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px auto 0;
 }
 
 .logout-button:hover {
-    background-color: #FF4C4C;
-    transform: scale(1.1);
+  background-color: #FF4C4C;
+  transform: scale(1.1);
 }
 
 .logout-button:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 @media (max-width: 768px) {
-    .user-content {
-        width: 50%;
-    }
+  .user-content {
+    width: 50%;
+  }
 }
-
 @media (max-width: 480px) {
-    .user-content {
-        width: 80%;
-    }
-
-    .action-button,
-    .logout-button {
-        width: 100%;
-        padding: 15px;
-    }
-}
+  .user-content {
+    width: 80%;
+  }
+  .action-button,
+  .logout-button {
+    width: 100%;
+    padding: 15px;
+  }
+}/*# sourceMappingURL=usuario.css.map */
