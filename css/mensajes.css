@@ -98,3 +98,20 @@ body {
 .bottom-icon:active {
     transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
+#clear-messages-button {
+    background-color: #ff4d4d; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin: 10px auto; /* Margen superior e inferior, centrado horizontalmente */
+    display: block; /* Convertir en bloque para centrar */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+#clear-messages-button:hover {
+    background-color: #ff1a1a; /* Color de fondo al pasar el cursor */
+}
+
