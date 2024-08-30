@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             }
                             markNextCycle();
                         } else {
-                            alert('Solo puedes marcar hasta 7 días seguidos.');
+                            alert('Solo puedes marcar hasta 7 días seguidos, deberías consultar con un profesional.');
                         }
                     }
                 }
@@ -94,5 +94,30 @@ document.addEventListener('DOMContentLoaded', function() {
         return maxConsecutiveDays <= 7;
     }
 
-    
+    function clearNextCycle() {
+        document.querySelectorAll('.next-cycle-day').forEach(day => {
+            day.classList.remove('next-cycle-day');
+        });
+    }
+
+    function markNextCycle() {
+        periodDays.forEach(date => {
+            const nextCycleDate = new Date(currentYear, date.month, date.day + 28);
+            const nextCycleMonth = nextCycleDate.getMonth();
+            const nextCycleDay = nextCycleDate.getDate();
+            const nextCycleContainer = document.getElementById(`month-${nextCycleMonth}`);
+            if (nextCycleContainer) {
+                const nextCycleDayElement = nextCycleContainer.querySelector(`div:nth-child(${nextCycleDay})`);
+                if (nextCycleDayElement) {
+                    nextCycleDayElement.classList.add('next-cycle-day');
+                }
+            }
+        });
+    }
+
+    function clearFuturePredictions() {
+        document.querySelectorAll('.future-prediction').forEach(day => {
+            day.classList.remove('future-prediction');
+        });
+    }
 });

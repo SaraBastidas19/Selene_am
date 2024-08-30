@@ -1,36 +1,21 @@
-// login.js
-
-// Función para obtener los usuarios almacenados en localStorage
-function obtenerUsuarios() {
-    let usuarios = localStorage.getItem('usuarios');
-    if (usuarios) {
-        return JSON.parse(usuarios);
-    } else {
-        return [];
-    }
-}
-
-// Función para validar el inicio de sesión
-function validarLogin(username, password) {
-    let usuarios = obtenerUsuarios();
-    return usuarios.some(usuario => usuario.username === username && usuario.password === password);
-}
-
-// Evento para manejar el envío del formulario de login
 document.addEventListener('DOMContentLoaded', () => {
-    const formularioLogin = document.querySelector('form');
+    const loginForm = document.getElementById('loginForm');
 
-    if (formularioLogin) {
-        formularioLogin.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
 
-            if (validarLogin(username, password)) {
-                alert('Inicio de sesión exitoso');
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            let user = users.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                localStorage.setItem('activeUser', JSON.stringify(user));
+                alert('Inicio de sesión exitoso.');
                 window.location.href = 'inicio.html';
             } else {
-                alert('Nombre de usuario o contraseña incorrectos');
+                alert('Nombre de usuario o contraseña incorrectos.');
             }
         });
     }
