@@ -104,7 +104,7 @@ body {
     border: none; /* Sin borde */
     padding: 10px 20px; /* Espaciado interno */
     font-size: 16px; /* Tamaño de la fuente */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 20px; /* Bordes redondeados */
     cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
     margin: 10px auto; /* Margen superior e inferior, centrado horizontalmente */
     display: block; /* Convertir en bloque para centrar */
@@ -112,6 +112,6 @@ body {
 }
 
 #clear-messages-button:hover {
-    background-color: #ff1a1a; /* Color de fondo al pasar el cursor */
+    background-color:#FF5B5B; /* Color de fondo al pasar el cursor */
 }
 
