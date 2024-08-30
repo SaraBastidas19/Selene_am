@@ -1,0 +1,86 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF1D4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #C7A4FF;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Contenido principal */
+.user-content {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Campos de entrada */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #C7A4FF;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Botón */
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF5B5B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.button:hover {
+    background-color: #5271FE;
+}
+
+/* Pie de página */
+.footer {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #5271FE;
+}
+
+.footer:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

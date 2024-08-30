@@ -151,3 +151,11 @@ body {
 .bottom-icon:active {
     transform: scale(0.9); /* Reduce el tamaño al hacer clic */
 }
+
+.next-cycle-day {
+    background-color: pink; /* Color rosa para los días del próximo ciclo */
+}
+
+.ovulation-day {
+    background-color: lightblue; /* Color azul para los días de ovulación */
+}

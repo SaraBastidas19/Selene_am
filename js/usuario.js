@@ -1,34 +1,35 @@
-// Función para guardar datos en localStorage al registrarse
-function saveUserData() {
-    const username = document.getElementById('username').value;
-    const birthYear = document.getElementById('birthYear').value;
+document.addEventListener('DOMContentLoaded', function() {
+    // Función para mostrar datos en la página de usuario
+    function displayUserData() {
+        const activeUser = JSON.parse(localStorage.getItem('activeUser'));
 
-    localStorage.setItem('username', username);
-    localStorage.setItem('birthYear', birthYear);
-}
-
-// Llama a esta función cuando el usuario se registre
-document.getElementById('registerButton').addEventListener('click', saveUserData);
-
-// Función para mostrar datos en la página de usuario
-function displayUserData() {
-    const username = localStorage.getItem('username');
-    const birthYear = localStorage.getItem('birthYear');
-
-    if (username && birthYear) {
-        document.getElementById('displayUsername').textContent = `Nombre de Usuario: ${username}`;
-        document.getElementById('displayBirthYear').textContent = `Año de Nacimiento: ${birthYear}`;
+        if (activeUser) {
+            document.getElementById('displayUsername').textContent = `Nombre de Usuario: ${activeUser.username}`;
+            document.getElementById('displayBirthYear').textContent = `Año de Nacimiento: ${activeUser.birthdate}`;
+            document.getElementById('userNameHeader').textContent = activeUser.username; // Actualiza el encabezado con el nombre de usuario
+        } else {
+            document.getElementById('displayUsername').textContent = "Nombre de Usuario: No disponible";
+            document.getElementById('displayBirthYear').textContent = "Año de Nacimiento: No disponible";
+            document.getElementById('userNameHeader').textContent = "User"; // Valor por defecto si no hay datos
+        }
     }
-}
 
-// Llama a esta función cuando la página de usuario se cargue
-window.onload = displayUserData;
+    // Llama a esta función cuando la página de usuario se cargue
+    displayUserData();
 
-// Configura los botones para redirigir a otras páginas
-document.getElementById('seguirCicloButton').addEventListener('click', function() {
-    window.location.href = 'seguir-ciclo.html';
-});
+    // Configura los botones para redirigir a otras páginas
+    const seguirCicloButton = document.getElementById('seguirCicloButton');
+    const cambiarContraseñaButton = document.getElementById('cambiarContraseñaButton');
 
-document.getElementById('cambiarContraseñaButton').addEventListener('click', function() {
-    window.location.href = 'cambiar-contraseña.html';
+    if (seguirCicloButton) {
+        seguirCicloButton.addEventListener('click', function() {
+            window.location.href = 'calendario.html';
+        });
+    }
+
+    if (cambiarContraseñaButton) {
+        cambiarContraseñaButton.addEventListener('click', function() {
+            window.location.href = 'recuperar_contraseña.html';
+        });
+    }
 });

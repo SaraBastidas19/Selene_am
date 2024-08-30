@@ -1,89 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Manejar el formulario de Registro 1
-    const registerForm1 = document.querySelector('form[action="registro2.html"]');
+    // Función para guardar datos del primer formulario
+    const saveRegistro1 = () => {
+        const fullName = document.getElementById('full-name').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
 
-    if (registerForm1) {
-        registerForm1.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevenir envío tradicional del formulario
+        // Guardar datos en localStorage
+        const user = {
+            fullName,
+            username,
+            password,
+            confirmPassword
+        };
 
-            // Obtener los valores de los campos del formulario
-            const fullName = document.getElementById('full-name').value;
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+    };
 
-            // Verificar que las contraseñas coincidan
-            if (password !== confirmPassword) {
-                alert('Las contraseñas no coinciden.');
-                return;
-            }
+    // Función para cargar datos del primer formulario en el segundo formulario
+    const loadRegistro1Data = () => {
+        const fullName = localStorage.getItem('fullName');
+        const username = localStorage.getItem('username');
+        const password = localStorage.getItem('password');
+        const confirmPassword = localStorage.getItem('confirmPassword');
 
-            // Crear un objeto temporal para guardar los datos
-            const temporaryUser = {
-                fullName: fullName,
-                username: username,
-                password: password,
-                confirmPassword: confirmPassword
-            };
+        if (fullName && username && password && confirmPassword) {
+            document.getElementById('full-name').value = fullName;
+            document.getElementById('username').value = username;
+            document.getElementById('password').value = password;
+            document.getElementById('confirm-password').value = confirmPassword;
+        }
+    };
 
-            // Guardar en localStorage
-            localStorage.setItem('temporaryUser', JSON.stringify(temporaryUser));
+    // Función para guardar datos del segundo formulario
+    const saveRegistro2 = () => {
+        const birthdate = document.getElementById('birthdate').value;
+        const lastCycle = document.getElementById('last-cycle').value;
+        const sexualActivity = document.querySelector('input[name="sexual-activity"]:checked').value;
+        const recoveryEmail = document.getElementById('recovery-email').value;
 
-            // Redirigir a registro2.html
+        // Actualizar datos del usuario en localStorage
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        let user = users[users.length - 1];
+        user.birthdate = birthdate;
+        user.lastCycle = lastCycle;
+        user.sexualActivity = sexualActivity;
+        user.recoveryEmail = recoveryEmail;
+
+        users[users.length - 1] = user;
+        localStorage.setItem('users', JSON.stringify(users));
+    };
+
+    // Evento para guardar datos del primer formulario al hacer clic en "Siguiente"
+    const registro1Form = document.getElementById('registro1Form');
+    if (registro1Form) {
+        registro1Form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            saveRegistro1();
             window.location.href = 'registro2.html';
         });
     }
 
-    // Manejar el formulario de Registro 2
-    const registerForm2 = document.querySelector('form:not([action="registro2.html"])');
-
-    if (registerForm2) {
-        registerForm2.addEventListener('submit', (e) => {
-            e.preventDefault(); // Evitar el envío tradicional del formulario
-
-            // Obtener los valores de los campos del formulario
-            const birthdate = document.getElementById('birthdate').value;
-            const lastCycle = document.getElementById('last-cycle').value;
-            const sexualActivity = document.querySelector('input[name="sexual-activity"]:checked').value;
-            const recoveryEmail = document.getElementById('recovery-email').value;
-
-            // Obtener los datos del primer formulario de registro del localStorage
-            const savedUser = JSON.parse(localStorage.getItem('temporaryUser'));
-
-            // Verifica si existe el usuario temporal guardado
-            if (!savedUser) {
-                alert('Hubo un error en el registro. Por favor, vuelve a intentarlo.');
-                return;
-            }
-
-            // Crear un nuevo objeto de usuario con los datos de ambos formularios
-            const newUser = {
-                fullName: savedUser.fullName,
-                username: savedUser.username,
-                password: savedUser.password,
-                birthdate: birthdate,
-                lastCycle: lastCycle,
-                sexualActivity: sexualActivity,
-                recoveryEmail: recoveryEmail
-            };
-
-            // Obtén la lista de usuarios existentes en el localStorage
-            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-            // Agrega el nuevo usuario a la lista
-            usuarios.push(newUser);
-
-            // Guarda la lista actualizada en el localStorage
-            localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-            // Limpia el usuario temporal del localStorage
-            localStorage.removeItem('temporaryUser');
-
-            // Muestra un mensaje de éxito
-            alert('¡Usuario registrado exitosamente!');
-
-            // Redirige a inicio.html
-            window.location.href = 'inicio.html';
+    // Evento para guardar datos del segundo formulario al hacer clic en "Regístrate"
+    const registro2Form = document.getElementById('registro2Form');
+    if (registro2Form) {
+        registro2Form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            saveRegistro2();
+            alert('Usuario registrado correctamente.');
+            window.location.href = 'login.html';
         });
+    }
+
+    // Cargar datos del primer formulario en el segundo formulario
+    if (document.title === 'Registro 2 - Selene') {
+        loadRegistro1Data();
     }
 });
