@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #FFF1D4;
 }
 
 /* Barra de navegación */
@@ -25,12 +25,12 @@ body {
   left: 0;
   width: 100%;
   padding: 15px;
-  background-color: #333;
+  background-color: #C7A4FF;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(215, 1, 1, 0.1);
   z-index: 1000;
 }
 
@@ -54,15 +54,15 @@ main {
 
 /* Estilos específicos para la página de Registro */
 .register-box {
-  border: 2px solid black;
   padding: 20px;
   width: 300px;
-  background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
-.register-box h1 {
+.logo {
+  width: 150px;
+  height: auto;
   margin-bottom: 20px;
 }
 
@@ -70,17 +70,17 @@ main {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #C7A4FF;
+  border-radius: 20px;
   font-size: 1em;
 }
 
 .register-box input::-moz-placeholder {
-  color: #888;
+  color: #C7A4FF;
 }
 
 .register-box input::placeholder {
-  color: #888;
+  color: #C7A4FF;
 }
 
 /* Botón de siguiente */
@@ -88,9 +88,9 @@ main {
   padding: 10px 20px;
   font-size: 1.2em;
   color: white;
-  background-color: #007BFF;
+  background-color: #FF5B5B;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   width: 100%;
 }

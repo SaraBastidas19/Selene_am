@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,15 +14,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FFF1D4;
+    background-color:  #FFF1D4
 }
-.logocolor {
-    width: 30px;
-    height: auto;
-    margin-bottom: 5px;
-   
-}
-
 
 /* Barra de navegación */
 .navbar {
@@ -39,7 +32,12 @@ body {
     box-shadow: 0 2px 4px rgba(215, 1, 1, 0.1);
     z-index: 1000;
 }
-
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+   
+}
 .brand-title {
     font-size: 1.5em;
     font-weight: bold;
@@ -58,56 +56,54 @@ main {
     margin-top: 100px; /* Desplaza el contenido para evitar que quede debajo de la barra */
 }
 
-/* Estilos específicos para la página de Login */
-.login-box {
+/* Estilos específicos para la página de Registro */
+.register-box {
    
-    padding: 30px;
+    padding: 20px;
     width: 300px;
-   
-    box-shadow: 0 4px 8px rgba(202, 17, 17, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 84, 84, 0.1);
     border-radius: 10px;
 }
 
-.logo {
-    width: 150px;
-    height: auto;
+.register-box h1 {
     margin-bottom: 20px;
-   
 }
 
-.login-box h1 {
-    margin-bottom: 20px;
-   
+.register-box label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-
-.login-box input {
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="date"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #C7A5FF;
+    border: 1px solid  #C7A4FF;
     border-radius: 20px;
     font-size: 1em;
 }
 
-.login-box input::placeholder {
-    color: #C7A4FF;
+.register-box input::placeholder {
+    color:  #C7A4FF;
 }
 
-.forgot-password {
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 0.9em;
-    color: #007BFF;
-    text-decoration: none;
+.register-box p {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
-.forgot-password:hover {
-    text-decoration: underline;
+.register-box label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
 }
 
-/* Botón de entrar */
+/* Botón de registrarse */
 .enter-btn {
     padding: 10px 20px;
     font-size: 1.2em;
@@ -123,12 +119,12 @@ main {
     background-color: #5271FE;
 }
 
-/* Enlace para registrarse */
+/* Enlace para iniciar sesión */
 .register-link {
     display: block;
     margin-top: 20px;
     font-size: 0.9em;
-    color: #5271FE;
+    color: #007BFF;
     text-decoration: none;
 }
 
