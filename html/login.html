@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Selene</title>
-    <link rel="stylesheet" href="/Selene_am/css/login.css">
+    <link rel="stylesheet" href="/css/login.css">
     <script src="/Selene_am/js/login.js" defer></script>
 </head>
 <body>
     <header>
         <div class="navbar">
-            <img src="/images/logocolor.png" alt="Usuario" class="logocolor">
+            <span class="brand-title">Selene</span>
             <a href="#" class="login-btn">Iniciar sesión</a>
         </div>
     </header>
 
     <main>
         <div class="login-box">
-            <img src="/images/logomono.png" alt="Usuario" class="logo">
-           
-            <form>
-                <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <a href="#" class="forgot-password">¿Haz olvidado tu contraseña?</a>
-                <button type="submit" class="enter-btn">Entrar</button>
+            <h1>Iniciar Sesión</h1>
+            <form id="loginForm">
+                <input type="text" id="login-username" name="username" placeholder="Nombre de usuario" required>
+                <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
+                <button type="submit" class="enter-btn">Iniciar Sesión</button>
             </form>
-            <a href="registro1.html" class="register-link">No tienes una cuenta, regístrate</a>
+            <a href="registro1.html" class="register-link">¿No tienes una cuenta? Regístrate</a>
         </div>
     </main>
 </body>
