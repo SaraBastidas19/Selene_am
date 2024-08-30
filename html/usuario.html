@@ -19,13 +19,17 @@
             <h2>User</h2>
             <h3 class="perfil-title">Perfil</h3>
             <div class="user-fields">
-                <input type="text" placeholder="Seguir mi ciclo">
-                <input type="text" placeholder="Nombre de usuario">
-                <input type="text" placeholder="Año de nacimiento">
-                <input type="password" placeholder="Cambiar contraseña">
+                <button id="seguirCicloButton" class="action-button" onclick="window.location.href='calendario.html'">Seguir mi ciclo</button>
+
+                <!-- Aquí se mostrarán el nombre de usuario y el año de nacimiento -->
+                <p id="displayUsername" class="user-info">Nombre de Usuario: Cargando...</p>
+                <p id="displayBirthYear" class="user-info">Año de Nacimiento: Cargando...</p>
+                <button id="cambiarContraseñaButton" class="action-button" onclick="window.location.href='recuperar_contraseña.html'">Cambiar contraseña</button>
             </div>
             <button class="logout-button" onclick="window.location.href='home.html'">Salir</button>
         </div>
     </main>
+
+    <script src="/Selene_am/js/usuario.js"></script>
 </body>
 </html>

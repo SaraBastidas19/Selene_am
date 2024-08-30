@@ -51,7 +51,7 @@ main {
     margin-top: 100px; /* Desplaza el contenido para evitar que quede debajo de la barra */
 }
 
-/* Estilos específicos para la página de Registro */
+/* Estilos específicos para la página de Registro 1 */
 .register-box {
     border: 2px solid black;
     padding: 20px;
@@ -65,16 +65,8 @@ main {
     margin-bottom: 20px;
 }
 
-.register-box label {
-    display: block;
-    font-size: 1em;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
 .register-box input[type="text"],
-.register-box input[type="email"],
-.register-box input[type="date"] {
+.register-box input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -85,18 +77,6 @@ main {
 
 .register-box input::placeholder {
     color: #888;
-}
-
-.register-box p {
-    margin-bottom: 10px;
-    text-align: left;
-    font-weight: bold;
-}
-
-.register-box label {
-    display: inline-block;
-    margin-right: 10px;
-    font-weight: normal;
 }
 
 /* Botón de registrarse */
