@@ -48,25 +48,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dayNumber = parseInt(this.textContent);
                 const monthIndex = parseInt(this.parentElement.id.split('-')[1]);
                 if (!isNaN(dayNumber) && monthIndex <= currentMonthIndex) {
-                    if (this.classList.contains('period-day')) {
-                        this.classList.remove('period-day');
-                        this.innerHTML = `<span>${dayNumber}</span>`;
-                        periodDays = periodDays.filter(date => date.day !== dayNumber || date.month !== monthIndex);
-                        clearNextCycle();
-                        markNextCycle();
-                    } else {
-                        if (canAddPeriodDay(dayNumber, monthIndex)) {
-                            this.classList.add('period-day');
-                            this.innerHTML = `<span>${dayNumber}</span>❤️`;
-                            periodDays.push({ day: dayNumber, month: monthIndex });
+                    if (monthIndex === 7) { // Solo permitir marcar en agosto (mes 7)
+                        if (this.classList.contains('period-day')) {
+                            this.classList.remove('period-day');
+                            this.innerHTML = `<span>${dayNumber}</span>`;
+                            periodDays = periodDays.filter(date => date.day !== dayNumber || date.month !== monthIndex);
                             clearNextCycle();
-                            if (monthIndex === currentMonthIndex) {
-                                clearFuturePredictions();
-                            }
                             markNextCycle();
                         } else {
-                            alert('Solo puedes marcar hasta 7 días seguidos, deberías consultar con un profesional.');
+                            if (canAddPeriodDay(dayNumber, monthIndex)) {
+                                if (periodDays.filter(date => date.month === monthIndex).length < 9) {
+                                    this.classList.add('period-day');
+                                    this.innerHTML = `<span>${dayNumber}</span>❤️`;
+                                    periodDays.push({ day: dayNumber, month: monthIndex });
+                                    clearNextCycle();
+                                    if (monthIndex === currentMonthIndex) {
+                                        clearFuturePredictions();
+                                    }
+                                    markNextCycle();
+                                } else {
+                                    alert('Solo puedes marcar hasta 9 días en el mes, deberías consultar con un profesional.');
+                                }
+                            } else {
+                                alert('Solo puedes marcar hasta 7 días seguidos, deberías consultar con un profesional.');
+                            }
                         }
+                    } else {
+                        alert('Solo puedes marcar días en el mes de agosto.');
                     }
                 }
             });
@@ -98,21 +106,42 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.next-cycle-day').forEach(day => {
             day.classList.remove('next-cycle-day');
         });
+        document.querySelectorAll('.ovulation-day').forEach(day => {
+            day.classList.remove('ovulation-day');
+        });
     }
 
     function markNextCycle() {
         periodDays.forEach(date => {
-            const nextCycleDate = new Date(currentYear, date.month, date.day + 28);
-            const nextCycleMonth = nextCycleDate.getMonth();
-            const nextCycleDay = nextCycleDate.getDate();
-            const nextCycleContainer = document.getElementById(`month-${nextCycleMonth}`);
-            if (nextCycleContainer) {
-                const nextCycleDayElement = nextCycleContainer.querySelector(`div:nth-child(${nextCycleDay})`);
-                if (nextCycleDayElement) {
-                    nextCycleDayElement.classList.add('next-cycle-day');
+            let nextCycleDate = new Date(currentYear, date.month, date.day);
+            for (let i = 0; i < 12; i++) { // Marcar en todos los meses
+                nextCycleDate.setDate(nextCycleDate.getDate() + 28);
+                const nextCycleMonth = nextCycleDate.getMonth();
+                const nextCycleDay = nextCycleDate.getDate();
+                const nextCycleContainer = document.getElementById(`month-${nextCycleMonth}`);
+                if (nextCycleContainer) {
+                    const nextCycleDayElement = nextCycleContainer.querySelector(`div:nth-child(${nextCycleDay})`);
+                    if (nextCycleDayElement) {
+                        nextCycleDayElement.classList.add('next-cycle-day');
+                        markOvulation(nextCycleDate); // Marcar la ovulación
+                    }
                 }
             }
         });
+    }
+
+    function markOvulation(nextCycleDate) {
+        const ovulationDate = new Date(nextCycleDate);
+        ovulationDate.setDate(ovulationDate.getDate() - 14); // 14 días antes del próximo ciclo
+        const ovulationMonth = ovulationDate.getMonth();
+        const ovulationDay = ovulationDate.getDate();
+        const ovulationContainer = document.getElementById(`month-${ovulationMonth}`);
+        if (ovulationContainer) {
+            const ovulationDayElement = ovulationContainer.querySelector(`div:nth-child(${ovulationDay})`);
+            if (ovulationDayElement) {
+                ovulationDayElement.classList.add('ovulation-day');
+            }
+        }
     }
 
     function clearFuturePredictions() {
